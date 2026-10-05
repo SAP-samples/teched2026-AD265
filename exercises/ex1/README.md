@@ -1,44 +1,154 @@
-# Exercise 1 - Exercise 1 Description
+# Exercise 1 - Run the Starting Application on Your Device
 
-In this exercise, we will create...
+## Estimated time
 
-## Exercise 1.1 Sub Exercise 1 Description
+:clock4: 15 minutes
 
-After completing these steps you will have created...
+## Objective
 
-1. Click here.
-<br>![](/exercises/ex1/images/01_01_0010.png)
+In this exercise, you will run a starting mobile development kit (MDK) application on your device.
 
-2.	Insert this line of code.
-```abap
-response->set_text( |Hello World! | ). 
-```
+| Exercise Number | Title |
+| --- | --- |
+| [Exercise 1.1](#exercise-11---clone-the-mdk-project-in-vscode) | Clone the MDK Project in VS Code |
+| [Exercise 1.2](#exercise-12---provide-your-assigned-service-worker-id-to-filter-related-incidents) | Provide Your Assigned Service Worker ID to Filter Related Incidents |
+| [Exercise 1.3](#exercise-13---deploy-the-application) | Deploy the Application |
+| [Exercise 1.4](#exercise-14---display-the-qr-code-for-onboarding-the-mobile-app) | Display the QR Code for Onboarding the Mobile App |
+| [Exercise 1.5](#exercise-15---run-the-app) | Run the App |
+
+### Exercise 1.1 - Clone the MDK Project in VS Code
+
+1. Open **Chrome** browser, copy the URL below and paste it into the **browser's address bar** to start cloning the MDK project in VS Code. You will see a browser page open asking you to open VS Code.
+
+    ```
+    vscode://vscode.git/clone?url=https://github.com/jitendrakansal/MDKApp.git
+    ```
+
+2. Click **Open Visual Studio Code**.
+
+    ![MDK](images/1.1.1.png)
+
+    > **Note:** VS Code will open (or come to focus) and may appear blank for a few seconds — this is normal. A folder picker dialog will appear shortly.
+
+3. When prompted to select a folder, choose your **Desktop** as the destination and click **Select as Repository Destination**.
+
+    ![MDK](images/1.1.2.png)
+
+4. When VS Code asks **"Would you like to open the cloned repository?"**, click **Open**.
+ 
+     ![MDK](images/1.1.3.png)
+
+5. Once the folder is open, you will see the MDK project in the VS Code Explorer, including the `Application.app` entry point. The MDK editor extension activates automatically for this project.
+
+    ![MDK](images/1.1.4.png)
 
 
+### Exercise 1.2 - Provide Your Assigned Service Worker ID to Filter Related Incidents
 
-## Exercise 1.2 Sub Exercise 2 Description
+1. In the VS Code Explorer, expand `Pages` &rarr; `Incident`, and click on the `Incident_List.page` to open it with the **Page Editor**.
 
-After completing these steps you will have...
+    ![MDK](images/1.2.1.png)
 
-1.	Enter this code.
-```abap
-DATA(lt_params) = request->get_form_fields(  ).
-READ TABLE lt_params REFERENCE INTO DATA(lr_params) WITH KEY name = 'cmd'.
-  IF sy-subrc <> 0.
-    response->set_status( i_code = 400
-                     i_reason = 'Bad request').
-    RETURN.
-  ENDIF.
+2. Select the Object Table, look for the **Target** property, and replace the `workerID` with the Service Worker ID assigned to you. 
 
-```
+    ![MDK](images/1.2.2.png)
 
-2.	Click here.
-<br>![](/exercises/ex1/images/01_02_0010.png)
+3. Save your changes manually. (**File** &rarr; **Save** or `Ctrl+S`).
 
+
+### Exercise 1.3 - Deploy the Application
+
+You will now deploy the application definitions to SAP Mobile Services. When you start the deployment, VS Code will first ask you to sign in to Cloud Foundry.
+
+1. With a page open in the MDK Page Editor (for example `Incident_List.page` from the previous step), click the blue **Deploy** button in the Page Editor toolbar (top-right of the editor).
+
+    ![MDK](images/1.3.1.png)
+
+2. If you are not yet signed in to Cloud Foundry, the MDK editor extension prompts you with **Please login to Cloud Foundry first**. Click **Login** to open the **Cloud Foundry Sign In and Targets** view.
+
+    ![MDK](images/1.3.2.png)
+
+3. Enter the following as the **Cloud Foundry Endpoint** (this is the API endpoint, not the app-domain `cfapps...` URL), then select **SSO Passcode** as the authentication method and click **Open a new browser page to generate your SSO passcode**.
+
+    ```url
+    https://api.cf.eu10-005.hana.ondemand.com
+    ```
+
+    ![MDK](images/1.3.3.png)
+
+4. On the **Choose your identity provider** page, enter the following origin key for the custom IdP, then click **Sign in with alternative identity provider**.
+
+    ```url
+    tdct3ched1-platform
+    ```
+
+    >Do **not** use *Sign in with default identity provider*. The default IdP is being disabled before the event, so always use the alternative IdP with the origin key above.
+
+    ![MDK](images/1.3.4.png)
+
+5. Sign in with the participant credentials shared with you. Copy the **Temporary Authentication Code** that is displayed.
+
+    ![MDK](images/1.3.5.png)
+
+6. Switch back to VS Code, paste it into the **SSO Passcode** field, and click **Sign In**.
+
+    ![MDK](images/1.3.6.png)
+
+7. Once signed in, select the **Cloud Foundry Organization** and **Space**, and click **Apply**.
+
+    | Field | Value |
+    |----|----|
+    | `Organization` | `ad265` |
+    | `Space` | `dev` |
+
+    ![MDK](images/1.3.7.png)
+
+8. Continue the deployment. When prompted **Please select Mobile Services landscape**, choose **standard**.
+
+    ![MDK](images/1.3.8.png)
+
+9. When prompted **Please select an application from Mobile Services**, choose the Mobile Services App ID assigned to you, `sap.mobile.ad265.XXX` (replace `XXX` with your student number, e.g. `sap.mobile.ad265.001`).
+
+    ![MDK](images/1.3.9.png)
+
+10. The MDK Bundler builds the upload bundle and deploys it to Mobile Services. The build runs in the terminal; when it finishes, you should see a **Deployed to Mobile Services successfully!** message.
+
+    ![MDK](images/1.3.10.png)
+
+### Exercise 1.4 - Display the QR Code for Onboarding the Mobile App
+
+You will now run the initial application on the Mobile client installed on your device by scanning the onboarding QR code. 
+
+1. With a page open in the MDK Page Editor, click the **QR code** icon in the Page Editor toolbar (next to the **Deploy** button, top-right of the editor).
+
+    ![MDK](images/1.4.1.png)
+
+2. The Onboarding QR code is now displayed. Leave the Onboarding dialog box open as you proceed to the next step.
+
+    ![MDK](images/1.4.2.png)
+
+### Exercise 1.5 - Run the App
+
+| Steps | Android | iOS |
+| --- | --- | --- |
+| 1. Launch **`Mobile Svcs`** app on your mobile device. Tap **Agree** on **End User License Agreement and Privacy Statement** screen. | <img src="images/1.5.1.png" alt="MDK" width="228" style="max-height:450px; object-fit:contain;" /> | <img src="images/1.5.2.png" alt="MDK" width="228" style="max-height:450px; object-fit:contain;" /> |
+| 2. Tap **Scan** to start the device camera for scanning the onboarding QR code and grant permission to access the camera. Please note, if you already have the MDK client onboarded, tap *Get Started* and *Scan new QR code* to continue. | <img src="images/1.5.3.png" alt="MDK" width="228" style="max-height:450px; object-fit:contain;" /> | <img src="images/1.5.4.png" alt="MDK" width="228" style="max-height:450px; object-fit:contain;" /> |
+| 3. Once the scan succeeds, tap **Continue**. | <img src="images/1.5.5.png" alt="MDK" width="228" style="max-height:450px; object-fit:contain;" /> | <img src="images/1.5.6.png" alt="MDK" width="228" style="max-height:450px; object-fit:contain;" /> |
+| 4. Tap `tdct3ched1.accounts.ondemand.com` to sign in. Use the login credentials that were shared with you during the session to log into SAP BTP. | <img src="images/1.5.7.png" alt="MDK" width="228" style="max-height:450px; object-fit:contain;" /> | <img src="images/1.5.8.png" alt="MDK" width="228" style="max-height:450px; object-fit:contain;" /> |
+| 5. Create a passcode that is at least 8 characters long to unlock the app, and then tap **Next**.  | <img src="images/1.5.9.png" alt="MDK" width="228" style="max-height:450px; object-fit:contain;" /> | <img src="images/1.5.10.png" alt="MDK" width="228" style="max-height:450px; object-fit:contain;" /> |
+| 6. Confirm the passcode and tap **Done**. | <img src="images/1.5.11.png" alt="MDK" width="228" style="max-height:450px; object-fit:contain;" /> | <img src="images/1.5.12.png" alt="MDK" width="228" style="max-height:450px; object-fit:contain;" /> |
+| 7. You have the option to enable Biometric Authentication for faster access to app data. On iOS, tap **Enable** if you wish to use this feature. On Android, provide your biometric information. | <img src="images/1.5.13.png" alt="MDK" width="228" style="max-height:450px; object-fit:contain;" /> | <img src="images/1.5.14.png" alt="MDK" width="228" style="max-height:450px; object-fit:contain;" /> |
+| 8. **(Android only)** Tap **Next**. If you want your MDK client to send you notifications, tap **Allow**, otherwise, tap **Don't allow**. | <img src="images/1.5.15.png" alt="MDK" width="228" style="max-height:450px; object-fit:contain;" /> <img src="images/1.5.16.png" alt="MDK" width="228" style="max-height:450px; object-fit:contain;" /> | NA |
+| 9. Tap **Now** to accept the deployed metadata definitions. | <img src="images/1.5.17.png" alt="MDK" width="228" style="max-height:450px; object-fit:contain;" /> | <img src="images/1.5.18.png" alt="MDK" width="228" style="max-height:450px; object-fit:contain;" /> |
+| 10. After accepting the app update, the offline store will initialize. You'll see a list of incidents assigned to you and a user menu icon on the main page. The user menu includes the following items:<br/><br/>- **Sync Changes:** This allows you to upload any local changes from the Mobile client to the backend and download any delta changes from the backend to the Mobile client.<br/><br/>- **Support:** This provides an easy way for users to contact support via a contact cell. The contact information is defined in the global settings.<br/><br/>- **Activity Log** option on the Support page allows the user to toggle client logging on or off, set the log level, set tracing categories, toggle OData tracing and, if enabled in the Mobile Services application, upload the current client logs. <br/><br/>- **Check for Updates:** This checks if new metadata has been deployed to the Mobile Services App Update. If new metadata is found, it will be downloaded and the user will be prompted to apply the changes.<br/><br/>- **About:** This page displays the current user/device ID, Application Name, Metadata version, and Client Version information.<br/><br/>- **Logout:** This completely resets the client, erasing any downloaded data and application metadata, and returns the user to the license agreement screen. | <img src="images/1.5.19.png" alt="MDK" width="228" style="max-height:450px; object-fit:contain;" /> | <img src="images/1.5.20.png" alt="MDK" width="228" style="max-height:450px; object-fit:contain;" /> |
+| 11. Tap any of the incidents to navigate to the detail page, where you'll find more information about the incident. You can also access the customer's address via a maps application. If the incident is marked as `closed`, an option to view the image of the defective device will be available. | <img src="images/1.5.21.gif" alt="MDK" width="228" style="max-height:450px; object-fit:contain;" /> | <img src="images/1.5.22.gif" alt="MDK" width="228" style="max-height:450px; object-fit:contain;" /> |
 
 ## Summary
 
-You've now ...
+You now have the starting application running in your MDK client.
 
-Continue to - [Exercise 2 - Exercise 2 Description](../ex2/README.md)
+## Navigation
 
+|  Next |
+|---|
+| [Exercise 2](../ex2/README.md) |
