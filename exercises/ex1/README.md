@@ -10,35 +10,27 @@ In this exercise, you will run a starting mobile development kit (MDK) applicati
 
 | Exercise Number | Title |
 | --- | --- |
-| [Exercise 1.1](#exercise-11---clone-the-mdk-project-in-vscode) | Clone the MDK Project in VS Code |
+| [Exercise 1.1](#exercise-11---set-up-and-open-the-mdk-project) | Set Up and Open the MDK Project |
 | [Exercise 1.2](#exercise-12---provide-your-assigned-service-worker-id-to-filter-related-incidents) | Provide Your Assigned Service Worker ID to Filter Related Incidents |
 | [Exercise 1.3](#exercise-13---deploy-the-application) | Deploy the Application |
 | [Exercise 1.4](#exercise-14---display-the-qr-code-for-onboarding-the-mobile-app) | Display the QR Code for Onboarding the Mobile App |
 | [Exercise 1.5](#exercise-15---run-the-app) | Run the App |
 
-### Exercise 1.1 - Clone the MDK Project in VS Code
+### Exercise 1.1 - Set Up and Open the MDK Project
 
-1. Open **Chrome** browser, copy the URL below and paste it into the **browser's address bar** to start cloning the MDK project in VS Code. You will see a browser page open asking you to open VS Code.
+Everything you need for this workshop is prepared by a single setup script that ships in this instructions repository (already prepared on your machine). It clones the MDK project you will work in — which already includes the in-workshop **Cline** coach — configures the Cline AI assistant (SAP AI Core + MDK tools), and opens the project in VS Code.
 
-    ```
-    vscode://vscode.git/clone?url=https://github.com/jitendrakansal/MDKApp.git
-    ```
+1. Save any open work first — the script restarts VS Code. In **File Explorer**, open the `setup` folder inside the `ad265` workshop folder and **double-click** `setup-ad265.bat`.
 
-2. Click **Open Visual Studio Code**.
+    > Run it from File Explorer (double-click), **not** from the VS Code integrated terminal — the script closes and reopens VS Code, which would kill its own terminal. Administrator rights are **not** required.
 
-    ![MDK](images/1.1.1.png)
+    ![setup-ad265.bat in File Explorer](images/1.1.1.png)
 
-    > **Note:** VS Code will open (or come to focus) and may appear blank for a few seconds — this is normal. A folder picker dialog will appear shortly.
+2. A console window shows the progress: it clones **MDKApp** (which ships with the coach rules) to your Desktop and installs the Cline configuration. When it finishes, VS Code opens automatically on the `MDKApp` project — no further action is needed while it runs.
 
-3. When prompted to select a folder, choose your **Desktop** as the destination and click **Select as Repository Destination**.
+3. If VS Code asks whether you trust the authors of the files in this folder, choose **Yes, I trust the authors** so the MDK editor and Cline work.
 
-    ![MDK](images/1.1.2.png)
-
-4. When VS Code asks **"Would you like to open the cloned repository?"**, click **Open**.
- 
-     ![MDK](images/1.1.3.png)
-
-5. Once the folder is open, you will see the MDK project in the VS Code Explorer, including the `Application.app` entry point. The MDK editor extension activates automatically for this project.
+4. You will see the MDK project in the VS Code Explorer, including the `Application.app` entry point. The MDK editor extension activates automatically for this project. Whenever you get stuck during the exercises, you can ask **Cline** for help — it is configured as an AD265 coach.
 
     ![MDK](images/1.1.4.png)
 

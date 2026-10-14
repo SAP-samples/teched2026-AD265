@@ -325,6 +325,7 @@ To update the `Status` and `DeviceID` properties of the Incident entity, the ODa
     |----|----|
     | `Message` | `Entity updated` |
     | `Duration` | `2` |
+    | `Animated` | Select `true` from the dropdown option |
     | `Common Action Properties` &rarr; `Success Action` | Click on the link icon and bind it to `CloseModalPage_Complete.action` |
 
     ![MDK](images/3.2.21.png) 
