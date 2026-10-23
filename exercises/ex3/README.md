@@ -72,7 +72,11 @@ In this step, you'll add fields editable by a technician, including status, ID o
     - If the current status is `In Process`, the technician has two options:
         - They can leave the default value as `In Process`, update the device ID, and continue working on the assigned incident.
         - They can change the status to `Closed` and provide all the necessary information to close the incident.
-    - Click on the link icon to open the Object Browser for the **Value** property. Select **OData Objects** in the dropdown menu. In the search field, look for status, select `Status` and double-click on it. Click **OK**.
+    - In the **Data** section of the Properties pane, click the **link icon** next to the `Value` field to open the Object Browser.
+
+    ![MDK](images/3.1.6a.png)
+
+    - Select **OData Objects** in the dropdown menu. In the search field, look for status, select `Status` and double-click on it. Click **OK**.
 
     ![MDK](images/3.1.6.png)
 

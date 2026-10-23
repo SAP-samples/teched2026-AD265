@@ -8,7 +8,7 @@
 
 In this exercise, you will learn how to enhance your MDK app using agentic AI through **Cline**, the AI assistant pre-installed in VS Code on your machine. Cline is connected to the **MDK MCP Server** (`mdk-mcp`), which exposes various MDK generator tools (such as `mdk-gen`) to the assistant. You'll generate translation files (i18n) in one or more languages, containing key-value string pairs that support localization. This allows your application to cater to a diverse audience and improves accessibility for users across different regions.
 
-> **Tip:** Cline was configured for you by the `setup-cline.bat` script (see [`setup/cline/`](../../../setup/cline/README.md)), which set up the SAP AI Core connection and the `mdk-mcp` server. If the Cline panel shows a welcome/onboarding screen instead of a ready chat, run that setup step again before continuing.
+> **Tip:** Cline was configured for you by the setup script you ran in [Exercise 1.1](../ex1/README.md#exercise-11---set-up-and-open-the-mdk-project) (SAP AI Core connection + `mdk-mcp` server). If the Cline panel shows a welcome/onboarding screen instead of a ready chat, run that setup script again before continuing.
 
 
 | Exercise Number   | Title                                                 |
