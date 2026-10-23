@@ -16,6 +16,14 @@ In this exercise, you will run a starting mobile development kit (MDK) applicati
 | [Exercise 1.4](#exercise-14---display-the-qr-code-for-onboarding-the-mobile-app) | Display the QR Code for Onboarding the Mobile App |
 | [Exercise 1.5](#exercise-15---run-the-app) | Run the App |
 
+## Requirement
+
+Before beginning the session exercises, please ensure that you have installed the **SAP Mobile Services Client** app from the public store. You can expedite the installation process by using the provided QR code.
+
+| Apps | Android | iOS |
+| :---: | :---: | :---: |
+| SAP Mobile Services Client | ![MDK](images/0.1.png) | ![MDK](images/0.2.png) |
+
 ### Exercise 1.1 - Set Up and Open the MDK Project
 
 Everything you need for this workshop is prepared by a single setup script that ships in this instructions repository (already prepared on your machine). It clones the MDK project you will work in — which already includes the in-workshop **Cline** coach — configures the Cline AI assistant (SAP AI Core + MDK tools), and opens the project in VS Code.
