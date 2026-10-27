@@ -51,7 +51,7 @@ Everything you need for this workshop is prepared by a single setup script that 
 
     ![MDK](images/1.2.1.png)
 
-2. Select the Object Table, look for the **Target** property, and replace the `workerID` with the Service Worker ID assigned to you. 
+2. Select the Object Table. In the **Target** section, locate the **QueryOptions** field. Its existing value ends with `workerID`; replace only `workerID` with the Service Worker ID assigned to you, leaving the rest of the query unchanged.
 
     ![MDK](images/1.2.2.png)
 
