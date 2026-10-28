@@ -28,7 +28,7 @@ Before beginning the session exercises, please ensure that you have installed th
 
 Everything you need for this workshop is prepared by a single setup script that ships in this instructions repository (already prepared on your machine). It clones the MDK project you will work in — which already includes the in-workshop **Cline** coach — configures the Cline AI assistant (SAP AI Core + MDK tools), and opens the project in VS Code.
 
-> If you do not see an `AD265` folder on your Desktop, [download the AD265 setup files](https://github.com/sandeep-tds/ad265-workshop-setup/archive/refs/tags/v1.0.1.zip) and extract the ZIP. Open the extracted `ad265-workshop-setup-1.0.1` folder, then move the `AD265` folder inside it to your Desktop.
+> If you do not see an `AD265` folder on your Desktop, [download the AD265 setup files](https://github.com/sandeep-tds/ad265-workshop-setup/releases/tag/v1.1.2) and extract the ZIP. Open the extracted `ad265-workshop-setup-1.1.2` folder, then move the `AD265` folder inside it to your Desktop.
 
 1. Save any open work first — the script restarts VS Code. In **File Explorer**, open the `AD265` folder on your Desktop and **double-click** `setup-ad265.bat`.
 
