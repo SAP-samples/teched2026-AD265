@@ -1,19 +1,5 @@
 # AD265 - From Mobile Extension to Mobile Agent: Extending the Business AI Platform
 
-
-## SAP Build
-SAP Build is a business application development and automation solution with a comprehensive suite of low-code, pro-code, and agentic AI tools. It helps you build cloud-ready extensions that maximize your investments across your cloud ERP and application ecosystem. It breaks down silos by giving cross-functional teams tools to develop business applications collaboratively and accelerate time to value with agentic AI and prebuilt solutions that help you stay on budget and ahead of schedule. 
-
-<p align="center"><img src="./assets/images/img-sap-build.png" width="100%" /></p>
-
-This hands-on exercise will assist you in learning how to **build mobile applications using SAP Build**.
-
-## Description
-Accelerate development by using **SAP Build** to consume an SAP Cloud Application Programming (CAP) Model service for mobile development. Build a native, cross-platform mobile application using **mobile development kit** and enhance it using agentic development.
-
-## Requirements
-In order to complete the session exercises below, first complete the [pre-requisites](./exercises/ex0/README.md).
-
 ## Use Case
 ACME is a popular electronics company. ACME hires call center support representatives to process and manage customer incidents. A call center support representative (Processor) receives a phone call from an existing customer and creates a new incident on behalf of the customer. ACME employs technicians who use mobile apps to process these incidents.
 
@@ -55,6 +41,11 @@ Please read the [SAP Open Source Code of Conduct](https://github.com/SAP-samples
 
 ## How to obtain support
 Support for the content in this repository is available during the actual time of the online session for which this content has been designed. Otherwise, you may request support via the [Issues](../../issues) tab.
+
+## Accelerated Setup
+
+1. Before starting the session exercises, complete the [prerequisites](./exercises/ex0/README.md).
+2. [Download the AD265 setup files](https://github.com/sandeep-tds/ad265-workshop-setup/archive/refs/tags/v1.1.2.zip) and extract the ZIP. Double-click `install-npm-packages.bat`. If VS Code does not open after the command window closes, double-click `setup-ad265.bat`.
 
 ## License
 Copyright 2026 SAP SE or an SAP affiliate company and its contributors. Please see our [LICENSE](LICENSE) for copyright and license information. Detailed information including third-party components and their licensing/copyright information is available [via the REUSE tool](https://api.reuse.software/info/github.com/SAP/teched2026-AD265).

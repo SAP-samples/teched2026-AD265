@@ -10,7 +10,7 @@ In this exercise, you will run a starting mobile development kit (MDK) applicati
 
 | Exercise Number | Title |
 | --- | --- |
-| [Exercise 1.1](#exercise-11---set-up-and-open-the-mdk-project) | Set Up and Open the MDK Project |
+| [Exercise 1.1](#exercise-11---confirm-the-mdk-project-is-open) | Confirm the MDK Project Is Open |
 | [Exercise 1.2](#exercise-12---provide-your-assigned-service-worker-id-to-filter-related-incidents) | Provide Your Assigned Service Worker ID to Filter Related Incidents |
 | [Exercise 1.3](#exercise-13---deploy-the-application) | Deploy the Application |
 | [Exercise 1.4](#exercise-14---display-the-qr-code-for-onboarding-the-mobile-app) | Display the QR Code for Onboarding the Mobile App |
@@ -24,21 +24,15 @@ Before beginning the session exercises, please ensure that you have installed th
 | :---: | :---: | :---: |
 | SAP Mobile Services Client | ![MDK](images/0.1.png) | ![MDK](images/0.2.png) |
 
-### Exercise 1.1 - Set Up and Open the MDK Project
+### Exercise 1.1 - Confirm the MDK Project Is Open
 
-Everything you need for this workshop is prepared by a single setup script that ships in this instructions repository (already prepared on your machine). It clones the MDK project you will work in — which already includes the in-workshop **Cline** coach — configures the Cline AI assistant (SAP AI Core + MDK tools), and opens the project in VS Code.
+The workshop setup has already been completed for you. VS Code should be open with the `MDKApp` folder loaded. The project includes the in-workshop **Cline** coach, configured with SAP AI Core and the MDK tools.
 
-1. Save any open work first — the script restarts VS Code. In **File Explorer**, open the `setup` folder inside the `ad265` workshop folder and **double-click** `setup-ad265.bat`.
+> **Note:** If VS Code is not open with the `MDKApp` folder, follow the [Accelerated Setup instructions](../../README.md#accelerated-setup).
 
-    > Run it from File Explorer (double-click), **not** from the VS Code integrated terminal — the script closes and reopens VS Code, which would kill its own terminal. Administrator rights are **not** required.
+1. If VS Code asks whether you trust the authors of the files in this folder, choose **Yes, I trust the authors** so the MDK editor and Cline work.
 
-    ![setup-ad265.bat in File Explorer](images/1.1.1.png)
-
-2. A console window shows the progress: it clones **MDKApp** (which ships with the coach rules) to your Desktop and installs the Cline configuration. When it finishes, VS Code opens automatically on the `MDKApp` project — no further action is needed while it runs.
-
-3. If VS Code asks whether you trust the authors of the files in this folder, choose **Yes, I trust the authors** so the MDK editor and Cline work.
-
-4. You will see the MDK project in the VS Code Explorer, including the `Application.app` entry point. The MDK editor extension activates automatically for this project. Whenever you get stuck during the exercises, you can ask **Cline** for help — it is configured as an AD265 coach.
+2. In the VS Code Explorer, confirm that the `MDKApp` project is open and includes the `Application.app` entry point. The MDK editor extension activates automatically for this project. Whenever you get stuck during the exercises, you can ask **Cline** for help — it is configured as an AD265 coach.
 
     ![MDK](images/1.1.4.png)
 
@@ -49,7 +43,7 @@ Everything you need for this workshop is prepared by a single setup script that 
 
     ![MDK](images/1.2.1.png)
 
-2. Select the Object Table, look for the **Target** property, and replace the `workerID` with the Service Worker ID assigned to you. 
+2. Select the Object Table. In the **Target** section, locate the **QueryOptions** field. Its existing value ends with `workerID`; replace only `workerID` with the Service Worker ID assigned to you, leaving the rest of the query unchanged.
 
     ![MDK](images/1.2.2.png)
 
@@ -128,6 +122,8 @@ You will now run the initial application on the Mobile client installed on your 
     ![MDK](images/1.4.2.png)
 
 ### Exercise 1.5 - Run the App
+
+> **Note:** If the **SAP Mobile Services Client** (`Mobile Svcs`) is not installed on your device, use the QR code in the [Requirement section](#requirement) to download it before continuing.
 
 | Steps | Android | iOS |
 | --- | --- | --- |
