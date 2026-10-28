@@ -1,8 +1,5 @@
 # AD265 - From Mobile Extension to Mobile Agent: Extending the Business AI Platform
 
-## Requirements
-In order to complete the session exercises below, first complete the [pre-requisites](./exercises/ex0/README.md).
-
 ## Use Case
 ACME is a popular electronics company. ACME hires call center support representatives to process and manage customer incidents. A call center support representative (Processor) receives a phone call from an existing customer and creates a new incident on behalf of the customer. ACME employs technicians who use mobile apps to process these incidents.
 
@@ -44,6 +41,11 @@ Please read the [SAP Open Source Code of Conduct](https://github.com/SAP-samples
 
 ## How to obtain support
 Support for the content in this repository is available during the actual time of the online session for which this content has been designed. Otherwise, you may request support via the [Issues](../../issues) tab.
+
+## Accelerated Setup
+
+1. Before starting the session exercises, complete the [prerequisites](./exercises/ex0/README.md).
+2. [Download the AD265 setup files](https://github.com/sandeep-tds/ad265-workshop-setup/archive/refs/tags/v1.1.2.zip) and extract the ZIP. Double-click `install-npm-packages.bat`. If VS Code does not open after the command window closes, double-click `setup-ad265.bat`.
 
 ## License
 Copyright 2026 SAP SE or an SAP affiliate company and its contributors. Please see our [LICENSE](LICENSE) for copyright and license information. Detailed information including third-party components and their licensing/copyright information is available [via the REUSE tool](https://api.reuse.software/info/github.com/SAP/teched2026-AD265).

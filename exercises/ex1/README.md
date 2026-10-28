@@ -28,7 +28,7 @@ Before beginning the session exercises, please ensure that you have installed th
 
 The workshop setup has already been completed for you. VS Code should be open with the `MDKApp` folder loaded. The project includes the in-workshop **Cline** coach, configured with SAP AI Core and the MDK tools.
 
-> **Note:** If VS Code is not open with the `MDKApp` folder, [download the AD265 setup files](https://github.com/sandeep-tds/ad265-workshop-setup/archive/refs/tags/v1.1.2.zip) and extract the ZIP. Open the extracted `ad265-workshop-setup-1.1.2` folder, move the `AD265` folder inside it to your Desktop, and double-click `setup-ad265.bat` in File Explorer. Run the script from File Explorer, not from the VS Code integrated terminal.
+> **Note:** If VS Code is not open with the `MDKApp` folder, follow the [Accelerated Setup instructions](../../README.md#accelerated-setup).
 
 1. If VS Code asks whether you trust the authors of the files in this folder, choose **Yes, I trust the authors** so the MDK editor and Cline work.
 
@@ -122,6 +122,8 @@ You will now run the initial application on the Mobile client installed on your 
     ![MDK](images/1.4.2.png)
 
 ### Exercise 1.5 - Run the App
+
+> **Note:** If the **SAP Mobile Services Client** (`Mobile Svcs`) is not installed on your device, use the QR code in the [Requirement section](#requirement) to download it before continuing.
 
 | Steps | Android | iOS |
 | --- | --- | --- |
