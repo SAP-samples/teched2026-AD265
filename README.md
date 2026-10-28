@@ -1,16 +1,5 @@
 # AD265 - From Mobile Extension to Mobile Agent: Extending the Business AI Platform
 
-
-## SAP Build
-SAP Build is a business application development and automation solution with a comprehensive suite of low-code, pro-code, and agentic AI tools. It helps you build cloud-ready extensions that maximize your investments across your cloud ERP and application ecosystem. It breaks down silos by giving cross-functional teams tools to develop business applications collaboratively and accelerate time to value with agentic AI and prebuilt solutions that help you stay on budget and ahead of schedule. 
-
-<p align="center"><img src="./assets/images/img-sap-build.png" width="100%" /></p>
-
-This hands-on exercise will assist you in learning how to **build mobile applications using SAP Build**.
-
-## Description
-Accelerate development by using **SAP Build** to consume an SAP Cloud Application Programming (CAP) Model service for mobile development. Build a native, cross-platform mobile application using **mobile development kit** and enhance it using agentic development.
-
 ## Requirements
 In order to complete the session exercises below, first complete the [pre-requisites](./exercises/ex0/README.md).
 
