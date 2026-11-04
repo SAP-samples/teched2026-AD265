@@ -1,4 +1,5 @@
 # AD265 - From Mobile Extension to Mobile Agent: Extending the Business AI Platform
+[![REUSE status](https://api.reuse.software/badge/github.com/SAP-samples/teched2026-AD265)](https://api.reuse.software/info/github.com/SAP-samples/teched2026-AD265)
 
 ## Use Case
 ACME is a popular electronics company. ACME hires call center support representatives to process and manage customer incidents. A call center support representative (Processor) receives a phone call from an existing customer and creates a new incident on behalf of the customer. ACME employs technicians who use mobile apps to process these incidents.
